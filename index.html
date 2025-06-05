@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuta | Full-Stack Developer & DevOps</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -413,6 +417,33 @@
                     <span>GitHub</span>
                 </a>
             </div>
+            <div class="language-selector" style="position: absolute; top: 20px; right: 20px; text-align: center;">
+                <label style="margin-right: 10px; font-weight: bold; cursor: pointer;">
+                    <input type="radio" name="language" value="th" onclick="setLanguage('th'); updateLanguageSelection(this)" checked style="display: none;">
+                    <span id="lang-th" style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: #6366f1; color: white;">TH</span>
+                </label>
+                <label style="font-weight: bold; cursor: pointer;">
+                    <input type="radio" name="language" value="en" onclick="setLanguage('en'); updateLanguageSelection(this)" style="display: none;">
+                    <span id="lang-en" style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: rgba(99, 102, 241, 0.1); color: #6366f1;">EN</span>
+                </label>
+            </div>
+            <script>
+                function updateLanguageSelection(selected) {
+                    const thButton = document.getElementById('lang-th');
+                    const enButton = document.getElementById('lang-en');
+                    if (selected.value === 'th') {
+                        thButton.style.backgroundColor = '#6366f1';
+                        thButton.style.color = 'white';
+                        enButton.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+                        enButton.style.color = '#6366f1';
+                    } else {
+                        enButton.style.backgroundColor = '#6366f1';
+                        enButton.style.color = 'white';
+                        thButton.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+                        thButton.style.color = '#6366f1';
+                    }
+                }
+            </script>
         </header>
 
         <!-- Skills Section -->
@@ -484,6 +515,25 @@
                     </div>
                 </div>
             </div>
+            <div class="certificate">
+                <p class="" style="font-size: 25px;">Certificate</p>
+                <img src="borntodev-academy_Get started with TypeScript_certificate.png" 
+                     alt="Certificate for Getting Started with TypeScript" 
+                     class="img-fluid img-thumbnail" 
+                     style="width: 300px; height: auto;" 
+                     data-toggle="modal" 
+                     data-target="#imageModal" 
+                     onclick="showImage(this.src)"/>
+            </div>
+            <div class="certificate">
+                <p class="" style="font-size: 25px;">Certificates Department Of Skill Development Ministry Of Labour</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <img src="CERT Android.png" alt="Certificate for Android" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
+                    <img src="CERT Cyber Security and Network Protection.png" alt="Certificate for Cyber Security and Network Protection" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
+                    <img src="CERT Data Security.png" alt="Certificate for Data Security" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
+                    <img src="CERT Programming for image processing and artifcial intelligence technology.png" alt="Certificate for Programming for Image Processing and AI" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
+                </div>
+            </div>
 
             <!-- Stats -->
             <div class="stats-grid">
@@ -506,7 +556,21 @@
             </div>
         </section>
     </div>
-
+    <div class="container">
+        <!-- Add the new Experience Section here -->
+        <section class="section">
+            <h2 class="section-title">💼 Experience</h2>
+            <p class="experience-text">โปรแกรมเมอร์มากประสบการณ์กว่า 9 ปีในการพัฒนา ดูแล และบำรุงรักษาเว็บแอปพลิเคชันและโครงสร้างพื้นฐานด้านไอที มีทักษะสูงในการจัดการเซิร์ฟเวอร์ การบริหารเครือข่าย รวมถึงการใช้เครื่องมือ AI และภาษาโปรแกรมสมัยใหม่ มีประสบการณ์ในการประสานงานโครงการ พร้อมรับมือกับการทำงานภายใต้แรงกดดันและการเรียนรู้เทคโนโลยีใหม่อยู่เสมอ มุ่งมั่นพัฒนาประสิทธิภาพของระบบและส่งมอบโซลูชันที่มั่นคงและตรงตามกำหนดเวลา</p>
+            <ul class="experience-list">
+                <li>ดูแลและบำรุงรักษาเว็บแอปพลิเคชัน เพื่อให้ทำงานอย่างมีประสิทธิภาพและปลอดภัย</li>
+                <li>บริหารจัดการเซิร์ฟเวอร์ รวมถึงการติดตั้ง การตั้งค่า และการแก้ไขปัญหาบนแพลตฟอร์ม Windows Server, CentOS, Debian, และ Ubuntu</li>
+                <li>ตรวจสอบระบบอย่างสม่ำเสมอด้วยเครื่องมือต่างๆ เช่น MySQL Workbench, Putty และ Uptime Kuma</li>
+                <li>กำกับดูแลแผนงานโครงการและประสานงานกับทีมภายในและภายนอก เพื่อให้บรรลุเป้าหมายตามกำหนดเวลา</li>
+                <li>ใช้เครื่องมือ AI สมัยใหม่ (Claude, ChatGPT, Gemini, Perplexity) เพื่อเพิ่มประสิทธิภาพการพัฒนาและความสามารถในการวิเคราะห์ข้อมูล</li>
+                <li>นำไปใช้และจัดการ FortiGate Firewall พร้อมทั้งวางมาตรการความปลอดภัยที่ช่วยลดการคุกคามได้อย่างมีประสิทธิภาพ</li>
+            </ul>
+        </section>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -524,6 +588,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Image" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Create floating particles
@@ -609,6 +689,53 @@
                 });
             });
         });
+
+        function showImage(src) {
+            document.getElementById('modalImage').src = src;
+        }
+
+        let currentLanguage = 'th'; // Default language
+
+        const content = {
+            th: {
+                experienceTitle: "🚀 Technical Expertise",
+                experienceText: "โปรแกรมเมอร์มากประสบการณ์กว่า 9 ปีในการพัฒนา ดูแล และบำรุงรักษาเว็บแอปพลิเคชันและโครงสร้างพื้นฐานด้านไอที มีทักษะสูงในการจัดการเซิร์ฟเวอร์ การบริหารเครือข่าย รวมถึงการใช้เครื่องมือ AI และภาษาโปรแกรมสมัยใหม่ มีประสบการณ์ในการประสานงานโครงการ พร้อมรับมือกับการทำงานภายใต้แรงกดดันและการเรียนรู้เทคโนโลยีใหม่อยู่เสมอ มุ่งมั่นพัฒนาประสิทธิภาพของระบบและส่งมอบโซลูชันที่มั่นคงและตรงตามกำหนดเวลา",
+                experienceList: [
+                    "ดูแลและบำรุงรักษาเว็บแอปพลิเคชัน เพื่อให้ทำงานอย่างมีประสิทธิภาพและปลอดภัย",
+                    "บริหารจัดการเซิร์ฟเวอร์ รวมถึงการติดตั้ง การตั้งค่า และการแก้ไขปัญหาบนแพลตฟอร์ม Windows Server, CentOS, Debian, และ Ubuntu",
+                    "ตรวจสอบระบบอย่างสม่ำเสมอด้วยเครื่องมือต่างๆ เช่น MySQL Workbench, Putty และ Uptime Kuma",
+                    "กำกับดูแลแผนงานโครงการและประสานงานกับทีมภายในและภายนอก เพื่อให้บรรลุเป้าหมายตามกำหนดเวลา",
+                    "ใช้เครื่องมือ AI สมัยใหม่ (Claude, ChatGPT, Gemini, Perplexity) เพื่อเพิ่มประสิทธิภาพการพัฒนาและความสามารถในการวิเคราะห์ข้อมูล",
+                    "นำไปใช้และจัดการ FortiGate Firewall พร้อมทั้งวางมาตรการความปลอดภัยที่ช่วยลดการคุกคามได้อย่างมีประสิทธิภาพ"
+                ]
+            },
+            en: {
+                experienceTitle: "🚀 Technical Expertise",
+                experienceText: "A programmer with over 9 years of experience in developing, maintaining, and managing web applications and IT infrastructure. Highly skilled in server management, network administration, and utilizing modern programming languages and AI tools. Experienced in project coordination, able to work under pressure, and continuously learning new technologies. Committed to improving system efficiency and delivering stable solutions on time.",
+                experienceList: [
+                    "Maintain and manage web applications to ensure they operate efficiently and securely.",
+                    "Manage servers, including installation, configuration, and troubleshooting on Windows Server, CentOS, Debian, and Ubuntu platforms.",
+                    "Regularly monitor systems using various tools such as MySQL Workbench, Putty, and Uptime Kuma.",
+                    "Oversee project plans and coordinate with internal and external teams to achieve goals on time.",
+                    "Utilize modern AI tools (Claude, ChatGPT, Gemini, Perplexity) to enhance development efficiency and data analysis capabilities.",
+                    "Implement and manage FortiGate Firewall while establishing security measures to effectively reduce threats."
+                ]
+            }
+        };
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.querySelector('.section-title').innerText = content[lang].experienceTitle;
+            document.querySelector('.experience-text').innerText = content[lang].experienceText;
+
+            const experienceList = document.querySelector('.experience-list');
+            experienceList.innerHTML = ''; // Clear existing list
+            content[lang].experienceList.forEach(item => {
+                const li = document.createElement('li');
+                li.innerText = item;
+                experienceList.appendChild(li);
+            });
+        }
     </script>
 </body>
 </html>
