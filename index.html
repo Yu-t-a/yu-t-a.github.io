@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuta | Full-Stack Developer & DevOps</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yuta | Full-Stack Developer & DevOps</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet">
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
         * {
             margin: 0;
             padding: 0;
@@ -393,41 +399,73 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="bg-animation"></div>
-    <div class="particles"></div>
 
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="profile-image">
-                <i class="fas fa-code"></i>
-            </div>
-            <h1 class="name">Yu-t-a</h1>
-            <p class="title">🛠️ DevOps | 🖥️ Full-Stack Developer</p>
-            <div class="contact-info">
-                <a href="mailto:weerayut.dev@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>weerayut.dev@gmail.com</span>
-                </a>
-                <a href="https://github.com/Yu-t-a" class="contact-item" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
-            <div class="language-selector" style="position: absolute; top: 20px; right: 20px; text-align: center;">
-                <label style="margin-right: 10px; font-weight: bold; cursor: pointer;">
-                    <input type="radio" name="language" value="th" onclick="setLanguage('th'); updateLanguageSelection(this)" checked style="display: none;">
-                    <span id="lang-th" style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: #6366f1; color: white;">TH</span>
-                </label>
-                <label style="font-weight: bold; cursor: pointer;">
-                    <input type="radio" name="language" value="en" onclick="setLanguage('en'); updateLanguageSelection(this)" style="display: none;">
-                    <span id="lang-en" style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: rgba(99, 102, 241, 0.1); color: #6366f1;">EN</span>
-                </label>
-            </div>
-            <script>
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    </style>
+    </head>
+    <body>
+        <div class="bg-animation"></div>
+        <div class="particles"></div>
+
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <div class="profile-image">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h1 class="name">Yu-t-a</h1>
+                <p class="title">🛠️ DevOps | 🖥️ Full-Stack Developer</p>
+                <div class="contact-info">
+                    <a href="mailto:weerayut.dev@gmail.com"
+                        class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>weerayut.dev@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/Yu-t-a" class="contact-item"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="language-selector"
+                    style="position: absolute; top: 20px; right: 20px; text-align: center;">
+                    <label
+                        style="margin-right: 10px; font-weight: bold; cursor: pointer;">
+                        <input type="radio" name="language" value="th"
+                            onclick="setLanguage('th'); updateLanguageSelection(this)"
+                            checked style="display: none;">
+                        <span id="lang-th"
+                            style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: #6366f1; color: white;">TH</span>
+                    </label>
+                    <label style="font-weight: bold; cursor: pointer;">
+                        <input type="radio" name="language" value="en"
+                            onclick="setLanguage('en'); updateLanguageSelection(this)"
+                            style="display: none;">
+                        <span id="lang-en"
+                            style="padding: 5px 10px; border: 1px solid #6366f1; border-radius: 5px; background-color: rgba(99, 102, 241, 0.1); color: #6366f1;">EN</span>
+                    </label>
+                </div>
+                <script>
                 function updateLanguageSelection(selected) {
                     const thButton = document.getElementById('lang-th');
                     const enButton = document.getElementById('lang-en');
@@ -444,168 +482,292 @@
                     }
                 }
             </script>
-        </header>
+            </header>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <h2 class="section-title">🚀 Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Node.js</span>
+            <!-- Skills Section -->
+            <section class="section">
+                <h2 class="section-title">🚀 Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming
+                            Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Database &
+                            Storage</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cloud"></i> DevOps &
+                            Infrastructure</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Terraform</span>
+                            <!-- <span class="skill-tag">Jenkins</span> -->
+                            <span class="skill-tag">Apache</span>
+                            <span class="skill-tag">Nginx</span>
+                            <span class="skill-tag">VMware</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-line"></i> Monitoring &
+                            Analytics</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">Uptime Kuma</span>
+                            <span class="skill-tag">SonarQube</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-network-wired"></i> Networking &
+                            Security</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">FortiGate</span>
+                            <span class="skill-tag">DNS</span>
+                            <span class="skill-tag">Cloudflare</span>
+                            <span class="skill-tag">OWASP ZAP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fab fa-git-alt"></i> Development
+                            Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GitLab</span>
+                            <span class="skill-tag">Git action</span>
+                            <!-- <span class="skill-tag">CI/CD</span> -->
+                            <span class="skill-tag">API Development</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & Storage</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
+                    <h3><i class="fas fa-chart-line"></i> Work Portfolio</h3>
+                    <div class="grid">
+                        <img src="access/Screenshot 2025-06-09 091023.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 091202.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 091220.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 091236.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 091436.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 092739.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 094045.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 094126.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 104826.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 111311.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 112508.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
+                        <img src="access/Screenshot 2025-06-09 112552.png"
+                            class="img-fluid img-thumbnail"
+                            style="width: 100%; height: auto;"
+                            data-toggle="modal" data-target="#imageModal"
+                            onclick="showImage(this.src)">
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> DevOps & Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Terraform</span>
-                        <!-- <span class="skill-tag">Jenkins</span> -->
-                        <span class="skill-tag">Apache</span>
-                        <span class="skill-tag">Nginx</span>
-                        <span class="skill-tag">VMware</span>
+                <div class="skill-category mt-3">
+                    <h3><i class="fas fa-chart-line"></i> Certificate</h3>
+                    <div class="certificate">
+                        <img
+                            src="borntodev-academy_Get started with TypeScript_certificate.png"
+                            alt="Certificate for Getting Started with TypeScript"
+                            class="img-fluid img-thumbnail"
+                            style="width: 300px; height: auto;"
+                            data-toggle="modal"
+                            data-target="#imageModal"
+                            onclick="showImage(this.src)" />
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Monitoring & Analytics</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">Uptime Kuma</span>
-                        <span class="skill-tag">SonarQube</span>
+                <div class="skill-category mt-3">
+                    <h3><i class="fas fa-chart-line"></i> Certificates
+                        Department Of
+                        Skill Development Ministry Of Labour</h3>
+                    <div class="certificate">
+
+                        <div
+                            style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                            <img src="CERT Android.png"
+                                alt="Certificate for Android"
+                                class="img-fluid img-thumbnail"
+                                style="width: 23%; height: auto; margin-bottom: 10px;"
+                                data-toggle="modal" data-target="#imageModal"
+                                onclick="showImage(this.src)" />
+                            <img
+                                src="CERT Cyber Security and Network Protection.png"
+                                alt="Certificate for Cyber Security and Network Protection"
+                                class="img-fluid img-thumbnail"
+                                style="width: 23%; height: auto; margin-bottom: 10px;"
+                                data-toggle="modal" data-target="#imageModal"
+                                onclick="showImage(this.src)" />
+                            <img src="CERT Data Security.png"
+                                alt="Certificate for Data Security"
+                                class="img-fluid img-thumbnail"
+                                style="width: 23%; height: auto; margin-bottom: 10px;"
+                                data-toggle="modal" data-target="#imageModal"
+                                onclick="showImage(this.src)" />
+                            <img
+                                src="CERT Programming for image processing and artifcial intelligence technology.png"
+                                alt="Certificate for Programming for Image Processing and AI"
+                                class="img-fluid img-thumbnail"
+                                style="width: 23%; height: auto; margin-bottom: 10px;"
+                                data-toggle="modal" data-target="#imageModal"
+                                onclick="showImage(this.src)" />
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-network-wired"></i> Networking & Security</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">FortiGate</span>
-                        <span class="skill-tag">DNS</span>
-                        <span class="skill-tag">Cloudflare</span>
-                        <span class="skill-tag">OWASP ZAP</span>
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fab fa-git-alt"></i> Development Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GitLab</span>
-                        <span class="skill-tag">Git action</span>
-                        <!-- <span class="skill-tag">CI/CD</span> -->
-                        <span class="skill-tag">API Development</span>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Technologies</span>
                     </div>
-                </div>
-            </div>
-            <div class="certificate">
-                <p class="" style="font-size: 25px;">Certificate</p>
-                <img src="borntodev-academy_Get started with TypeScript_certificate.png" 
-                     alt="Certificate for Getting Started with TypeScript" 
-                     class="img-fluid img-thumbnail" 
-                     style="width: 300px; height: auto;" 
-                     data-toggle="modal" 
-                     data-target="#imageModal" 
-                     onclick="showImage(this.src)"/>
-            </div>
-            <div class="certificate">
-                <p class="" style="font-size: 25px;">Certificates Department Of Skill Development Ministry Of Labour</p>
-                <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                    <img src="CERT Android.png" alt="Certificate for Android" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
-                    <img src="CERT Cyber Security and Network Protection.png" alt="Certificate for Cyber Security and Network Protection" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
-                    <img src="CERT Data Security.png" alt="Certificate for Data Security" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
-                    <img src="CERT Programming for image processing and artifcial intelligence technology.png" alt="Certificate for Programming for Image Processing and AI" class="img-fluid img-thumbnail" style="width: 23%; height: auto; margin-bottom: 10px;" data-toggle="modal" data-target="#imageModal" onclick="showImage(this.src)"/>
-                </div>
-            </div>
-
-            <!-- Stats -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">9+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">Technologies</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <!-- <div class="stat-card">
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <!-- <div class="stat-card">
                     <span class="stat-number">24/7</span>
                     <span class="stat-label">Support Available</span>
                 </div> -->
-            </div>
-        </section>
-    </div>
-    <div class="container">
-        <!-- Add the new Experience Section here -->
-        <section class="section">
-            <h2 class="section-title">💼 Experience</h2>
-            <p class="experience-text">โปรแกรมเมอร์มากประสบการณ์กว่า 9 ปีในการพัฒนา ดูแล และบำรุงรักษาเว็บแอปพลิเคชันและโครงสร้างพื้นฐานด้านไอที มีทักษะสูงในการจัดการเซิร์ฟเวอร์ การบริหารเครือข่าย รวมถึงการใช้เครื่องมือ AI และภาษาโปรแกรมสมัยใหม่ มีประสบการณ์ในการประสานงานโครงการ พร้อมรับมือกับการทำงานภายใต้แรงกดดันและการเรียนรู้เทคโนโลยีใหม่อยู่เสมอ มุ่งมั่นพัฒนาประสิทธิภาพของระบบและส่งมอบโซลูชันที่มั่นคงและตรงตามกำหนดเวลา</p>
-            <ul class="experience-list">
-                <li>ดูแลและบำรุงรักษาเว็บแอปพลิเคชัน เพื่อให้ทำงานอย่างมีประสิทธิภาพและปลอดภัย</li>
-                <li>บริหารจัดการเซิร์ฟเวอร์ รวมถึงการติดตั้ง การตั้งค่า และการแก้ไขปัญหาบนแพลตฟอร์ม Windows Server, CentOS, Debian, และ Ubuntu</li>
-                <li>ตรวจสอบระบบอย่างสม่ำเสมอด้วยเครื่องมือต่างๆ เช่น MySQL Workbench, Putty และ Uptime Kuma</li>
-                <li>กำกับดูแลแผนงานโครงการและประสานงานกับทีมภายในและภายนอก เพื่อให้บรรลุเป้าหมายตามกำหนดเวลา</li>
-                <li>ใช้เครื่องมือ AI สมัยใหม่ (Claude, ChatGPT, Gemini, Perplexity) เพื่อเพิ่มประสิทธิภาพการพัฒนาและความสามารถในการวิเคราะห์ข้อมูล</li>
-                <li>นำไปใช้และจัดการ FortiGate Firewall พร้อมทั้งวางมาตรการความปลอดภัยที่ช่วยลดการคุกคามได้อย่างมีประสิทธิภาพ</li>
-            </ul>
-        </section>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
+                </div>
+            </section>
+        </div>
         <div class="container">
-            <p>&copy; 2025 Yu-t-a. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Yu-t-a" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:weerayut.dev@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <!-- Add the new Experience Section here -->
+            <section class="section">
+                <h2 class="section-title">💼 Experience</h2>
+                <p class="experience-text">โปรแกรมเมอร์มากประสบการณ์กว่า 9
+                    ปีในการพัฒนา ดูแล
+                    และบำรุงรักษาเว็บแอปพลิเคชันและโครงสร้างพื้นฐานด้านไอที
+                    มีทักษะสูงในการจัดการเซิร์ฟเวอร์ การบริหารเครือข่าย
+                    รวมถึงการใช้เครื่องมือ AI และภาษาโปรแกรมสมัยใหม่
+                    มีประสบการณ์ในการประสานงานโครงการ
+                    พร้อมรับมือกับการทำงานภายใต้แรงกดดันและการเรียนรู้เทคโนโลยีใหม่อยู่เสมอ
+                    มุ่งมั่นพัฒนาประสิทธิภาพของระบบและส่งมอบโซลูชันที่มั่นคงและตรงตามกำหนดเวลา</p>
+                <ul class="experience-list">
+                    <li>ดูแลและบำรุงรักษาเว็บแอปพลิเคชัน
+                        เพื่อให้ทำงานอย่างมีประสิทธิภาพและปลอดภัย</li>
+                    <li>บริหารจัดการเซิร์ฟเวอร์ รวมถึงการติดตั้ง การตั้งค่า
+                        และการแก้ไขปัญหาบนแพลตฟอร์ม Windows Server, CentOS,
+                        Debian, และ Ubuntu</li>
+                    <li>ตรวจสอบระบบอย่างสม่ำเสมอด้วยเครื่องมือต่างๆ เช่น MySQL
+                        Workbench, Putty และ Uptime Kuma</li>
+                    <li>กำกับดูแลแผนงานโครงการและประสานงานกับทีมภายในและภายนอก
+                        เพื่อให้บรรลุเป้าหมายตามกำหนดเวลา</li>
+                    <li>ใช้เครื่องมือ AI สมัยใหม่ (Claude, ChatGPT, Gemini,
+                        Perplexity)
+                        เพื่อเพิ่มประสิทธิภาพการพัฒนาและความสามารถในการวิเคราะห์ข้อมูล</li>
+                    <li>นำไปใช้และจัดการ FortiGate Firewall
+                        พร้อมทั้งวางมาตรการความปลอดภัยที่ช่วยลดการคุกคามได้อย่างมีประสิทธิภาพ</li>
+                </ul>
+            </section>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Yu-t-a. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Yu-t-a" class="social-link"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:weerayut.dev@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog"
+            aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Image</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modalImage" src alt="Image"
+                            class="img-fluid" />
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Image</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" src="" alt="Image" class="img-fluid" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
+        <script>
         // Create floating particles
         function createParticles() {
             const particlesContainer = document.querySelector('.particles');
@@ -737,5 +899,5 @@
             });
         }
     </script>
-</body>
+    </body>
 </html>
